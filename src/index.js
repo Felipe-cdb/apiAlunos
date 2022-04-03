@@ -74,6 +74,6 @@ app.delete('/deletar/:id', verifyJWT , async (req, res) => {
     return res.json(({mensagem: 'Usuário Deletado com sucesso!!!'}))
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Servidor Rodando')
 });
